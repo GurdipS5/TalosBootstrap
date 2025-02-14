@@ -1,0 +1,53 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+W |                      | Attempting second-chance registration of MSBuild after RegisterDefaults failed
+W |                      | Could not register MSBuild: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+W |                      | Exception was suppressed
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+File name: 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at Nuke.Common.Execution.Telemetry.CheckAwareness()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | KubeLintScan         | EventInvoker.OnTargetRunning (-3.4028235E+38)
+V | KubeLintScan         | Telemetry.OnTargetSucceeded (0)
+V | KubeLintScan         | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | KubeConform          | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | KubeConform          | > C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Get-ChildItem -Path .\Manifests -Recurse -Filter *.yaml | ForEach-Object { kubeconform -strict -verbose -output junit -ignore-missing-schemas -summary  $_.FullName } 
+V | KubeConform          | @ D:\Repositories\Talosbootstrap
+D | KubeConform          | <testsuites name="kubeconform" time="0.2145251" tests="1" failures="0" disabled="1" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\Ingress\gateway.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="1">
+D | KubeConform          |     <testcase name="default/example-gateway" classname="Gateway@gateway.networking.k8s.io/v1" time="0">
+D | KubeConform          |       <skipped message=""></skipped>
+D | KubeConform          |     </testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.1960953" tests="1" failures="0" disabled="1" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\Ingress\route.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="1">
+D | KubeConform          |     <testcase name="ngrok-gateway/my-route" classname="HTTPRoute@gateway.networking.k8s.io/v1" time="0">
+D | KubeConform          |       <skipped message=""></skipped>
+D | KubeConform          |     </testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.0020897" tests="0" failures="0" disabled="0" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\loadbalancer.yaml" id="1" tests="0" failures="0" errors="0" disabled="0" skipped="0"></testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.2849585" tests="1" failures="0" disabled="0" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\pod.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="0">
+D | KubeConform          |     <testcase name="security-context-demo" classname="Pod@v1" time="0"></testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+V | KubeConform          | Telemetry.OnTargetSucceeded (0)
+V | KubeConform          | EventInvoker.OnTargetSucceeded (-3.4028235E+38)

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tcp-onearm-test
+  namespace: apps
+  labels:
+    what: tcp-onearm-test
+spec:
+  containers:
+    - name: tcp-onearm-test
+      image: ghcr.io/loxilb-io/nginx:stable
+      ports:
+        - containerPort: 80

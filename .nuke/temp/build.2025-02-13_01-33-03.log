@@ -1,0 +1,426 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+W |                      | Attempting second-chance registration of MSBuild after RegisterDefaults failed
+W |                      | Could not register MSBuild: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+W |                      | Exception was suppressed
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+File name: 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at Nuke.Common.Execution.Telemetry.CheckAwareness()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | KubeLintScan         | EventInvoker.OnTargetRunning (-3.4028235E+38)
+V | KubeLintScan         | Telemetry.OnTargetSucceeded (0)
+V | KubeLintScan         | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | KubeConform          | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | KubeConform          | > C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Get-ChildItem -Path .\Manifests -Recurse -Filter *.yaml | ForEach-Object { kubeconform -strict -verbose -output junit -ignore-missing-schemas -summary  $_.FullName } 
+V | KubeConform          | @ D:\Repositories\Talosbootstrap
+D | KubeConform          | <testsuites name="kubeconform" time="0.0696271" tests="1" failures="0" disabled="1" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\Ingress\gateway.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="1">
+D | KubeConform          |     <testcase name="default/example-gateway" classname="Gateway@gateway.networking.k8s.io/v1" time="0">
+D | KubeConform          |       <skipped message=""></skipped>
+D | KubeConform          |     </testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.0681457" tests="1" failures="0" disabled="1" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\Ingress\route.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="1">
+D | KubeConform          |     <testcase name="ngrok-gateway/my-route" classname="HTTPRoute@gateway.networking.k8s.io/v1" time="0">
+D | KubeConform          |       <skipped message=""></skipped>
+D | KubeConform          |     </testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.0015371" tests="0" failures="0" disabled="0" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\loadbalancer.yaml" id="1" tests="0" failures="0" errors="0" disabled="0" skipped="0"></testsuite>
+D | KubeConform          | </testsuites>
+D | KubeConform          | <testsuites name="kubeconform" time="0.1662387" tests="1" failures="0" disabled="0" errors="0">
+D | KubeConform          |   <testsuite name="D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\pod.yaml" id="1" tests="1" failures="0" errors="0" disabled="0" skipped="0">
+D | KubeConform          |     <testcase name="security-context-demo" classname="Pod@v1" time="0"></testcase>
+D | KubeConform          |   </testsuite>
+D | KubeConform          | </testsuites>
+V | KubeConform          | Telemetry.OnTargetSucceeded (0)
+V | KubeConform          | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | KubeLint             | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | KubeLint             | > C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Get-ChildItem -Path .\Manifests -Recurse -Include  '*.yaml',  '*.yml' | ForEach-Object { kube-linter lint $_.FullName } 
+V | KubeLint             | @ D:\Repositories\Talosbootstrap
+E | KubeLint             | Warning: no valid objects found.
+E | KubeLint             | Warning: no valid objects found.
+E | KubeLint             | Warning: no valid objects found.
+D | KubeLint             | KubeLinter 0.7.1
+E | KubeLint             | Error: found 3 lint errors
+D | KubeLint             | 
+D | KubeLint             | D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\pod.yaml: (object: <no namespace>/security-context-demo /v1, Kind=Pod) The container "sec-ctx-demo" is using an invalid container image, "busybox". Please use images that are not blocked by the `BlockList` criteria : [".*:(latest)$" "^[^:]*$" "(.*/[^:]+)$"] (check: latest-tag, remediation: Use a container image with a specific tag other than latest.)
+D | KubeLint             | 
+D | KubeLint             | D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\pod.yaml: (object: <no namespace>/security-context-demo /v1, Kind=Pod) container "sec-ctx-demo" does not have a read-only root file system (check: no-read-only-root-fs, remediation: Set readOnlyRootFilesystem to true in the container securityContext.)
+D | KubeLint             | 
+D | KubeLint             | D:\Repositories\Talosbootstrap\Manifests\LoadBalancer\pod.yaml: (object: <no namespace>/security-context-demo /v1, Kind=Pod) container "sec-ctx-demo" has memory limit 0 (check: unset-memory-requirements, remediation: Set memory limits for your container based on its requirements. Refer to https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits for details.)
+D | KubeLint             | 
+V | KubeLint             | Telemetry.OnTargetSucceeded (0)
+V | KubeLint             | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | RunSemGrep           | EventInvoker.OnTargetRunning (-3.4028235E+38)
+E | RunSemGrep           | Target RunSemGrep has thrown an exception
+System.ComponentModel.Win32Exception (2): An error occurred trying to start process 'semgrep' with working directory 'D:\Repositories\Talosbootstrap'. The system cannot find the file specified.
+   at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Build.<>c.<get_RunSemGrep>b__13_1() in D:\Repositories\Talosbootstrap\build\Build.cs:line 71
+   at Nuke.Common.Execution.BuildExecutor.<>c.<Execute>b__4_2(Action x) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, ExecutableTarget target, IReadOnlyCollection`1 previouslyExecutedTargets, Boolean failureMode) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+V | RunSemGrep           | EventInvoker.OnTargetFailed (-3.4028235E+38)
+V | SecretScan           | EventInvoker.OnTargetRunning (-3.4028235E+38)
+V | SecretScan           | Telemetry.OnTargetSucceeded (0)
+V | SecretScan           | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | ExecutePolaris       | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | ExecutePolaris       | > D:\Tools\polaris.exe audit --audit-path ./Manifests/ --set-exit-code-on-danger --set-exit-code-below-score 90
+V | ExecutePolaris       | @ D:\Repositories\Talosbootstrap
+D | ExecutePolaris       | {
+D | ExecutePolaris       |   "PolarisOutputVersion": "1.0",
+D | ExecutePolaris       |   "AuditTime": "2025-02-13T01:33:06Z",
+D | ExecutePolaris       |   "SourceType": "Path",
+D | ExecutePolaris       |   "SourceName": "./Manifests/",
+D | ExecutePolaris       |   "DisplayName": "./Manifests/",
+D | ExecutePolaris       |   "ClusterInfo": {
+D | ExecutePolaris       |     "Version": "unknown",
+D | ExecutePolaris       |     "Nodes": 0,
+D | ExecutePolaris       |     "Pods": 0,
+D | ExecutePolaris       |     "Namespaces": 0,
+D | ExecutePolaris       |     "Controllers": 1
+D | ExecutePolaris       |   },
+D | ExecutePolaris       |   "Results": [
+D | ExecutePolaris       |     {
+D | ExecutePolaris       |       "Name": "security-context-demo",
+D | ExecutePolaris       |       "Namespace": "",
+D | ExecutePolaris       |       "Kind": "Pod",
+D | ExecutePolaris       |       "Results": {
+D | ExecutePolaris       |         "metadataAndInstanceMismatched": {
+D | ExecutePolaris       |           "ID": "metadataAndInstanceMismatched",
+D | ExecutePolaris       |           "Message": "Label app.kubernetes.io/instance must match metadata.name",
+D | ExecutePolaris       |           "Details": null,
+D | ExecutePolaris       |           "Success": false,
+D | ExecutePolaris       |           "Severity": "warning",
+D | ExecutePolaris       |           "Category": "Reliability",
+D | ExecutePolaris       |           "Mutations": null
+D | ExecutePolaris       |         }
+D | ExecutePolaris       |       },
+D | ExecutePolaris       |       "PodResult": {
+D | ExecutePolaris       |         "Name": "",
+D | ExecutePolaris       |         "Results": {
+D | ExecutePolaris       |           "automountServiceAccountToken": {
+D | ExecutePolaris       |             "ID": "automountServiceAccountToken",
+D | ExecutePolaris       |             "Message": "The ServiceAccount will be automounted",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": false,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "hostIPCSet": {
+D | ExecutePolaris       |             "ID": "hostIPCSet",
+D | ExecutePolaris       |             "Message": "Host IPC is not configured",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "danger",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "hostNetworkSet": {
+D | ExecutePolaris       |             "ID": "hostNetworkSet",
+D | ExecutePolaris       |             "Message": "Host network is not configured",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "danger",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "hostPIDSet": {
+D | ExecutePolaris       |             "ID": "hostPIDSet",
+D | ExecutePolaris       |             "Message": "Host PID is not configured",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "danger",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "hostPathSet": {
+D | ExecutePolaris       |             "ID": "hostPathSet",
+D | ExecutePolaris       |             "Message": "HostPath volumes are not configured",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "hostProcess": {
+D | ExecutePolaris       |             "ID": "hostProcess",
+D | ExecutePolaris       |             "Message": "Privileged access to the host check is valid",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "missingNetworkPolicy": {
+D | ExecutePolaris       |             "ID": "missingNetworkPolicy",
+D | ExecutePolaris       |             "Message": "A NetworkPolicy should match pod labels and contain applied egress and ingress rules",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": false,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "priorityClassNotSet": {
+D | ExecutePolaris       |             "ID": "priorityClassNotSet",
+D | ExecutePolaris       |             "Message": "Priority class should be set",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": false,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Reliability",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "procMount": {
+D | ExecutePolaris       |             "ID": "procMount",
+D | ExecutePolaris       |             "Message": "The default /proc masks are set up to reduce attack surface, and should be required",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": true,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Security",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           },
+D | ExecutePolaris       |           "topologySpreadConstraint": {
+D | ExecutePolaris       |             "ID": "topologySpreadConstraint",
+D | ExecutePolaris       |             "Message": "Pod should be configured with a valid topology spread constraint",
+D | ExecutePolaris       |             "Details": null,
+D | ExecutePolaris       |             "Success": false,
+D | ExecutePolaris       |             "Severity": "warning",
+D | ExecutePolaris       |             "Category": "Reliability",
+D | ExecutePolaris       |             "Mutations": null
+D | ExecutePolaris       |           }
+D | ExecutePolaris       |         },
+D | ExecutePolaris       |         "ContainerResults": [
+D | ExecutePolaris       |           {
+D | ExecutePolaris       |             "Name": "sec-ctx-demo",
+D | ExecutePolaris       |             "Results": {
+D | ExecutePolaris       |               "cpuLimitsMissing": {
+D | ExecutePolaris       |                 "ID": "cpuLimitsMissing",
+D | ExecutePolaris       |                 "Message": "CPU limits should be set",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Efficiency",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "cpuRequestsMissing": {
+D | ExecutePolaris       |                 "ID": "cpuRequestsMissing",
+D | ExecutePolaris       |                 "Message": "CPU requests are set",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Efficiency",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "dangerousCapabilities": {
+D | ExecutePolaris       |                 "ID": "dangerousCapabilities",
+D | ExecutePolaris       |                 "Message": "Container does not have any dangerous capabilities",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "hostPortSet": {
+D | ExecutePolaris       |                 "ID": "hostPortSet",
+D | ExecutePolaris       |                 "Message": "Host port is not configured",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "insecureCapabilities": {
+D | ExecutePolaris       |                 "ID": "insecureCapabilities",
+D | ExecutePolaris       |                 "Message": "Container should not have insecure capabilities",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "linuxHardening": {
+D | ExecutePolaris       |                 "ID": "linuxHardening",
+D | ExecutePolaris       |                 "Message": "Use one of AppArmor, Seccomp, SELinux, or dropping Linux Capabilities to restrict containers using unwanted privileges",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Security",
+E | ExecutePolaris       | 
+D | ExecutePolaris       |                 "Mutations": null
+E | ExecutePolaris       | 
+D | ExecutePolaris       |               },
+E | ExecutePolaris       | 🚀 Upload your Polaris findings to Fairwinds Insights to see remediation advice, add teammates, integrate with Slack or Jira, and more:
+D | ExecutePolaris       |               "livenessProbeMissing": {
+E | ExecutePolaris       | 
+D | ExecutePolaris       |                 "ID": "livenessProbeMissing",
+E | ExecutePolaris       | ❯ polaris audit --audit-path ./Manifests/ --set-exit-code-on-danger --set-exit-code-below-score 90 --upload-insights --cluster-name=my-cluster
+D | ExecutePolaris       |                 "Message": "Liveness probe should be configured",
+E | ExecutePolaris       | 
+D | ExecutePolaris       |                 "Details": null,
+E | ExecutePolaris       | time="2025-02-13T01:33:06Z" level=info msg="1 danger items found in audit"
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Reliability",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "memoryLimitsMissing": {
+D | ExecutePolaris       |                 "ID": "memoryLimitsMissing",
+D | ExecutePolaris       |                 "Message": "Memory limits should be set",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Efficiency",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "memoryRequestsMissing": {
+D | ExecutePolaris       |                 "ID": "memoryRequestsMissing",
+D | ExecutePolaris       |                 "Message": "Memory requests are set",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Efficiency",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "notReadOnlyRootFilesystem": {
+D | ExecutePolaris       |                 "ID": "notReadOnlyRootFilesystem",
+D | ExecutePolaris       |                 "Message": "Filesystem should be read only",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "privilegeEscalationAllowed": {
+D | ExecutePolaris       |                 "ID": "privilegeEscalationAllowed",
+D | ExecutePolaris       |                 "Message": "Privilege escalation not allowed",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "pullPolicyNotAlways": {
+D | ExecutePolaris       |                 "ID": "pullPolicyNotAlways",
+D | ExecutePolaris       |                 "Message": "Image pull policy should be \"Always\"",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Reliability",
+D | ExecutePolaris       |                 "Mutations": [
+D | ExecutePolaris       |                   {
+D | ExecutePolaris       |                     "Path": "/spec/containers/0/imagePullPolicy",
+D | ExecutePolaris       |                     "Op": "add",
+D | ExecutePolaris       |                     "Value": "Always",
+D | ExecutePolaris       |                     "Comment": ""
+D | ExecutePolaris       |                   }
+D | ExecutePolaris       |                 ]
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "readinessProbeMissing": {
+D | ExecutePolaris       |                 "ID": "readinessProbeMissing",
+D | ExecutePolaris       |                 "Message": "Readiness probe should be configured",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "warning",
+D | ExecutePolaris       |                 "Category": "Reliability",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "runAsPrivileged": {
+D | ExecutePolaris       |                 "ID": "runAsPrivileged",
+D | ExecutePolaris       |                 "Message": "Not running as privileged",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "runAsRootAllowed": {
+D | ExecutePolaris       |                 "ID": "runAsRootAllowed",
+D | ExecutePolaris       |                 "Message": "Is not allowed to run as root",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "sensitiveContainerEnvVar": {
+D | ExecutePolaris       |                 "ID": "sensitiveContainerEnvVar",
+D | ExecutePolaris       |                 "Message": "The container does not set potentially sensitive environment variables",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": true,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Security",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               },
+D | ExecutePolaris       |               "tagNotSpecified": {
+D | ExecutePolaris       |                 "ID": "tagNotSpecified",
+D | ExecutePolaris       |                 "Message": "Image tag should be specified",
+D | ExecutePolaris       |                 "Details": null,
+D | ExecutePolaris       |                 "Success": false,
+D | ExecutePolaris       |                 "Severity": "danger",
+D | ExecutePolaris       |                 "Category": "Reliability",
+D | ExecutePolaris       |                 "Mutations": null
+D | ExecutePolaris       |               }
+D | ExecutePolaris       |             }
+D | ExecutePolaris       |           }
+D | ExecutePolaris       |         ]
+D | ExecutePolaris       |       },
+D | ExecutePolaris       |       "CreatedTime": "0001-01-01T00:00:00Z"
+D | ExecutePolaris       |     },
+D | ExecutePolaris       |     {
+D | ExecutePolaris       |       "Name": "example-gateway",
+D | ExecutePolaris       |       "Namespace": "default",
+D | ExecutePolaris       |       "Kind": "Gateway",
+D | ExecutePolaris       |       "Results": {},
+D | ExecutePolaris       |       "PodResult": null,
+D | ExecutePolaris       |       "CreatedTime": "0001-01-01T00:00:00Z"
+D | ExecutePolaris       |     },
+D | ExecutePolaris       |     {
+D | ExecutePolaris       |       "Name": "my-route",
+D | ExecutePolaris       |       "Namespace": "ngrok-gateway",
+D | ExecutePolaris       |       "Kind": "HTTPRoute",
+D | ExecutePolaris       |       "Results": {},
+D | ExecutePolaris       |       "PodResult": null,
+D | ExecutePolaris       |       "CreatedTime": "0001-01-01T00:00:00Z"
+D | ExecutePolaris       |     }
+D | ExecutePolaris       |   ],
+D | ExecutePolaris       |   "Score": 65
+D | ExecutePolaris       | }
+E | ExecutePolaris       | Target ExecutePolaris has thrown an exception
+Nuke.Common.Tooling.ProcessException: Process 'polaris.exe' exited with code 3.
+   > D:\Tools\polaris.exe audit --audit-path ./Manifests/ --set-exit-code-on-danger --set-exit-code-below-score 90
+   @ D:\Repositories\Talosbootstrap
+Error output:
+   
+   
+   🚀 Upload your Polaris findings to Fairwinds Insights to see remediation advice, add teammates, integrate with Slack or Jira, and more:
+   
+   ❯ polaris audit --audit-path ./Manifests/ --set-exit-code-on-danger --set-exit-code-below-score 90 --upload-insights --cluster-name=my-cluster
+   
+   time="2025-02-13T01:33:06Z" level=info msg="1 danger items found in audit"
+
+   at Nuke.Common.Tooling.ProcessExtensions.AssertZeroExitCode(IProcess process) in /_/source/Nuke.Tooling/ProcessExtensions.cs:line 38
+   at Nuke.Common.Tooling.ToolExecutor.<>c.<Execute>b__2_0(IProcess p) in /_/source/Nuke.Tooling/ToolExecutor.cs:line 63
+   at Nuke.Common.Tooling.ToolExecutor.Execute(ArgumentStringHandler arguments, String workingDirectory, IReadOnlyDictionary`2 environmentVariables, Nullable`1 timeout, Nullable`1 logOutput, Nullable`1 logInvocation, Action`2 logger, Action`1 exitHandler) in /_/source/Nuke.Tooling/ToolExecutor.cs:line 63
+   at Build.<get_ExecutePolaris>b__17_1() in D:\Repositories\Talosbootstrap\build\Build.cs:line 88
+   at Nuke.Common.Execution.BuildExecutor.<>c.<Execute>b__4_2(Action x) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, ExecutableTarget target, IReadOnlyCollection`1 previouslyExecutedTargets, Boolean failureMode) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+V | ExecutePolaris       | EventInvoker.OnTargetFailed (-3.4028235E+38)

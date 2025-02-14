@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "auto-changelog": "^2.5.0",
+    "czg": "^1.11.0",
+    "readme-md-generator": "^1.0.0"
+  }
+}

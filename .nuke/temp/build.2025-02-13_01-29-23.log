@@ -1,0 +1,64 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+W |                      | Attempting second-chance registration of MSBuild after RegisterDefaults failed
+W |                      | Could not register MSBuild: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+W |                      | Exception was suppressed
+System.IO.FileNotFoundException: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+File name: 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+   at Nuke.Common.Execution.Telemetry.CheckAwareness()
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | KubeLintScan         | EventInvoker.OnTargetRunning (-3.4028235E+38)
+V | KubeLintScan         | Telemetry.OnTargetSucceeded (0)
+V | KubeLintScan         | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | KubeConform          | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | KubeConform          | > "C:\Program Files\PowerShell\7\pwsh.exe" Get-ChildItem -Path .\Manifests -Recurse -Filter *.yaml | ForEach-Object { kubeconform -strict -verbose -output junit -ignore-missing-schemas -summary  $_.FullName } 
+V | KubeConform          | @ D:\Repositories\Talosbootstrap
+D | KubeConform          | 
+E | KubeConform          | The argument 'Get-ChildItem' is not recognized as the name of a script file. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+D | KubeConform          | Usage: pwsh[.exe] [-Login] [[-File] <filePath> [args]]
+D | KubeConform          |                   [-Command { - | <script-block> [-args <arg-array>]
+D | KubeConform          |                                 | <string> [<CommandParameters>] } ]
+D | KubeConform          |                   [-CommandWithArgs <string> [<CommandParameters>]
+D | KubeConform          |                   [-ConfigurationName <string>] [-ConfigurationFile <filePath>]
+D | KubeConform          |                   [-CustomPipeName <string>] [-EncodedCommand <Base64EncodedCommand>]
+D | KubeConform          |                   [-ExecutionPolicy <ExecutionPolicy>] [-InputFormat {Text | XML}]
+D | KubeConform          |                   [-Interactive] [-MTA] [-NoExit] [-NoLogo] [-NonInteractive] [-NoProfile]
+D | KubeConform          |                   [-NoProfileLoadTime] [-OutputFormat {Text | XML}] 
+D | KubeConform          |                   [-SettingsFile <filePath>] [-SSHServerMode] [-STA] 
+D | KubeConform          |                   [-Version] [-WindowStyle <style>] 
+D | KubeConform          |                   [-WorkingDirectory <directoryPath>]
+D | KubeConform          | 
+D | KubeConform          |        pwsh[.exe] -h | -Help | -? | /?
+D | KubeConform          | 
+D | KubeConform          | PowerShell Online Help https://aka.ms/powershell-docs
+D | KubeConform          | 
+D | KubeConform          | All parameters are case-insensitive.
+E | KubeConform          | Target KubeConform has thrown an exception
+Nuke.Common.Tooling.ProcessException: Process 'pwsh.exe' exited with code 64.
+   > "C:\Program Files\PowerShell\7\pwsh.exe" Get-ChildItem -Path .\Manifests -Recurse -Filter *.yaml | ForEach-Object { kubeconform -strict -verbose -output junit -ignore-missing-schemas -summary  $_.FullName } 
+   @ D:\Repositories\Talosbootstrap
+Error output:
+   The argument 'Get-ChildItem' is not recognized as the name of a script file. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+   at Nuke.Common.Tooling.ProcessExtensions.AssertZeroExitCode(IProcess process) in /_/source/Nuke.Tooling/ProcessExtensions.cs:line 38
+   at Nuke.Common.Tooling.ToolExecutor.<>c.<Execute>b__2_0(IProcess p) in /_/source/Nuke.Tooling/ToolExecutor.cs:line 63
+   at Nuke.Common.Tooling.ToolExecutor.Execute(ArgumentStringHandler arguments, String workingDirectory, IReadOnlyDictionary`2 environmentVariables, Nullable`1 timeout, Nullable`1 logOutput, Nullable`1 logInvocation, Action`2 logger, Action`1 exitHandler) in /_/source/Nuke.Tooling/ToolExecutor.cs:line 63
+   at Build.<get_KubeConform>b__9_1() in D:\Repositories\Talosbootstrap\build\Build.cs:line 53
+   at Nuke.Common.Execution.BuildExecutor.<>c.<Execute>b__4_2(Action x) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, ExecutableTarget target, IReadOnlyCollection`1 previouslyExecutedTargets, Boolean failureMode) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+V | KubeConform          | EventInvoker.OnTargetFailed (-3.4028235E+38)
