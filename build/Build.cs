@@ -33,13 +33,13 @@ class Build : NukeBuild
     [PathVariable("polaris")]
     readonly Tool Polaris;
 
-    [PathVariable("powershell")]
+    [PathVariable("pwsh")]
     readonly Tool Pwsh;
 
     [PathVariable("ggshield")]
     readonly Tool GGCli;
 
-    [PathVariable("kuibescape")]
+    [PathVariable("kubescape")]
     readonly Tool Kubescape;
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
