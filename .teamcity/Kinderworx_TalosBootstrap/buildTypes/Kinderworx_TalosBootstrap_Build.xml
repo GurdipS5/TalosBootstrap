@@ -17,7 +17,7 @@
       <vcs-entry-ref root-id="Kinderworx_TalosBootstrap_HttpsGithubComGurdipS5TalosBootstrapRefsHeadsMaster" />
     </vcs-settings>
     <requirements>
-      <exists id="RQ_3" name="kubectl" />
+      <equals id="RQ_3" name="env.KUBECTL_EXISTS" value="true" />
     </requirements>
     <build-triggers>
       <build-trigger id="TRIGGER_11" type="vcsTrigger">
