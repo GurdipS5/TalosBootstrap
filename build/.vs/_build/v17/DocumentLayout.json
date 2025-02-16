@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Repositories\\Talosbootstrap\\build\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CAE74053-8A5C-4A55-8792-25E06154B9B1}|_build.csproj|d:\\repositories\\talosbootstrap\\build\\_build.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CAE74053-8A5C-4A55-8792-25E06154B9B1}|_build.csproj|solutionrelative:_build.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CAE74053-8A5C-4A55-8792-25E06154B9B1}|_build.csproj|d:\\repositories\\talosbootstrap\\build\\build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAE74053-8A5C-4A55-8792-25E06154B9B1}|_build.csproj|solutionrelative:build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -39,12 +43,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_build",
+              "DocumentMoniker": "D:\\Repositories\\Talosbootstrap\\build\\_build.csproj",
+              "RelativeDocumentMoniker": "_build.csproj",
+              "ToolTip": "D:\\Repositories\\Talosbootstrap\\build\\_build.csproj",
+              "RelativeToolTip": "_build.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-16T18:55:57.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Build.cs",
               "DocumentMoniker": "D:\\Repositories\\Talosbootstrap\\build\\Build.cs",
               "RelativeDocumentMoniker": "Build.cs",
               "ToolTip": "D:\\Repositories\\Talosbootstrap\\build\\Build.cs",
               "RelativeToolTip": "Build.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-13T01:19:56.773Z",
               "EditorCaption": ""

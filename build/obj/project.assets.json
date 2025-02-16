@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "Azure.Core/1.44.1": {
         "type": "package",
         "dependencies": {
@@ -154,36 +154,36 @@
           }
         }
       },
-      "Microsoft.Build/17.11.4": {
+      "Microsoft.Build/17.12.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.11.4",
-          "Microsoft.NET.StringTools": "17.11.4",
+          "Microsoft.Build.Framework": "17.12.6",
+          "Microsoft.NET.StringTools": "17.12.6",
           "System.Collections.Immutable": "8.0.0",
           "System.Configuration.ConfigurationManager": "8.0.0",
           "System.Reflection.Metadata": "8.0.0",
           "System.Reflection.MetadataLoadContext": "8.0.0"
         },
         "compile": {
-          "ref/net8.0/Microsoft.Build.dll": {
+          "ref/net9.0/Microsoft.Build.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net9.0/_._": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Microsoft.Build.Framework/17.11.4": {
+      "Microsoft.Build.Framework/17.12.6": {
         "type": "package",
         "compile": {
-          "ref/net8.0/Microsoft.Build.Framework.dll": {
+          "ref/net9.0/Microsoft.Build.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net9.0/_._": {
             "related": ".pdb;.xml"
           }
         }
@@ -200,62 +200,59 @@
           "build/_._": {}
         }
       },
-      "Microsoft.Build.Tasks.Core/17.11.4": {
+      "Microsoft.Build.Tasks.Core/17.12.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.11.4",
-          "Microsoft.Build.Utilities.Core": "17.11.4",
-          "Microsoft.NET.StringTools": "17.11.4",
+          "Microsoft.Build.Framework": "17.12.6",
+          "Microsoft.Build.Utilities.Core": "17.12.6",
+          "Microsoft.NET.StringTools": "17.12.6",
           "System.CodeDom": "8.0.0",
           "System.Collections.Immutable": "8.0.0",
           "System.Configuration.ConfigurationManager": "8.0.0",
+          "System.Formats.Asn1": "8.0.1",
           "System.Resources.Extensions": "8.0.0",
           "System.Security.Cryptography.Pkcs": "8.0.0",
           "System.Security.Cryptography.Xml": "8.0.0"
         },
         "compile": {
-          "ref/net8.0/Microsoft.Build.Tasks.Core.dll": {
+          "ref/net9.0/Microsoft.Build.Tasks.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net9.0/_._": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Microsoft.Build.Utilities.Core/17.11.4": {
+      "Microsoft.Build.Utilities.Core/17.12.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.11.4",
-          "Microsoft.NET.StringTools": "17.11.4",
+          "Microsoft.Build.Framework": "17.12.6",
+          "Microsoft.NET.StringTools": "17.12.6",
           "System.Collections.Immutable": "8.0.0",
           "System.Configuration.ConfigurationManager": "8.0.0"
         },
         "compile": {
-          "ref/net8.0/Microsoft.Build.Utilities.Core.dll": {
+          "ref/net9.0/Microsoft.Build.Utilities.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net9.0/_._": {
             "related": ".pdb;.xml"
           }
         }
       },
       "Microsoft.Extensions.DependencyModel/9.0.0": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "9.0.0",
-          "System.Text.Json": "9.0.0"
-        },
         "compile": {
-          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+          "lib/net9.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+          "lib/net9.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
@@ -310,15 +307,15 @@
           }
         }
       },
-      "Microsoft.NET.StringTools/17.11.4": {
+      "Microsoft.NET.StringTools/17.12.6": {
         "type": "package",
         "compile": {
-          "ref/net8.0/Microsoft.NET.StringTools.dll": {
+          "ref/net9.0/Microsoft.NET.StringTools.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net9.0/_._": {
             "related": ".pdb;.xml"
           }
         }
@@ -576,22 +573,22 @@
       "Nuke.ProjectModel/9.0.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build": "17.11.4",
-          "Microsoft.Build.Framework": "17.11.4",
+          "Microsoft.Build": "17.12.6",
+          "Microsoft.Build.Framework": "17.12.6",
           "Microsoft.Build.Locator": "1.7.8",
-          "Microsoft.Build.Tasks.Core": "17.11.4",
-          "Microsoft.Build.Utilities.Core": "17.11.4",
+          "Microsoft.Build.Tasks.Core": "17.12.6",
+          "Microsoft.Build.Utilities.Core": "17.12.6",
           "Nuke.SolutionModel": "9.0.4",
           "Nuke.Tooling": "9.0.4",
           "Nuke.Utilities": "9.0.4"
         },
         "compile": {
-          "lib/net8.0/Nuke.ProjectModel.dll": {
+          "lib/net9.0/Nuke.ProjectModel.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Nuke.ProjectModel.dll": {
+          "lib/net9.0/Nuke.ProjectModel.dll": {
             "related": ".xml"
           }
         }
@@ -908,12 +905,12 @@
       "Serilog/4.2.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/Serilog.dll": {
+          "lib/net9.0/Serilog.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Serilog.dll": {
+          "lib/net9.0/Serilog.dll": {
             "related": ".xml"
           }
         }
@@ -1282,22 +1279,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
-        }
-      },
-      "System.IO.Pipelines/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.Linq/4.3.0": {
@@ -1890,34 +1871,33 @@
           }
         }
       },
-      "System.Text.Encodings.Web/9.0.0": {
+      "System.Text.Encodings.Web/6.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net8.0/System.Text.Encodings.Web.dll": {
+          "lib/net6.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Text.Encodings.Web.dll": {
+          "lib/net6.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net8.0/_._": {}
+          "buildTransitive/netcoreapp3.1/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
+          "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll": {
             "assetType": "runtime",
             "rid": "browser"
           }
         }
       },
-      "System.Text.Json/9.0.0": {
+      "System.Text.Json/8.0.5": {
         "type": "package",
-        "dependencies": {
-          "System.IO.Pipelines": "9.0.0",
-          "System.Text.Encodings.Web": "9.0.0"
-        },
         "compile": {
           "lib/net8.0/System.Text.Json.dll": {
             "related": ".xml"
@@ -1929,7 +1909,7 @@
           }
         },
         "build": {
-          "buildTransitive/net8.0/System.Text.Json.targets": {}
+          "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
       "System.Threading/4.3.0": {
@@ -2152,10 +2132,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Build/17.11.4": {
-      "sha512": "UMC7DfeFEHY2GGHHaghybUuUlLaByFHEFudR2PehMgDBuRuLAUePp1iaa4eFtVzepRzMtIbeSCVJCzzX3NV2Gg==",
+    "Microsoft.Build/17.12.6": {
+      "sha512": "Gz8VteydDNLOhm0vov0dSeQb43ibQ4EnWoc2UtjUd7F3MNFo12o/3XLvVFoZ9b8UXBX6EzraL8XLCy93QTnnIA==",
       "type": "package",
-      "path": "microsoft.build/17.11.4",
+      "path": "microsoft.build/17.12.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2164,22 +2144,22 @@
         "lib/net472/Microsoft.Build.dll",
         "lib/net472/Microsoft.Build.pdb",
         "lib/net472/Microsoft.Build.xml",
-        "lib/net8.0/Microsoft.Build.dll",
-        "lib/net8.0/Microsoft.Build.pdb",
-        "lib/net8.0/Microsoft.Build.xml",
-        "microsoft.build.17.11.4.nupkg.sha512",
+        "lib/net9.0/Microsoft.Build.dll",
+        "lib/net9.0/Microsoft.Build.pdb",
+        "lib/net9.0/Microsoft.Build.xml",
+        "microsoft.build.17.12.6.nupkg.sha512",
         "microsoft.build.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.dll",
         "ref/net472/Microsoft.Build.xml",
-        "ref/net8.0/Microsoft.Build.dll",
-        "ref/net8.0/Microsoft.Build.xml"
+        "ref/net9.0/Microsoft.Build.dll",
+        "ref/net9.0/Microsoft.Build.xml"
       ]
     },
-    "Microsoft.Build.Framework/17.11.4": {
-      "sha512": "u28uDihlqxtt8h2dL1ZJOZ7TRkxBK+HGr+3FgQpILVo7Q7gErkw8mYW9R+RM5PtxvZTdYb/4MWDL66vdIsANBQ==",
+    "Microsoft.Build.Framework/17.12.6": {
+      "sha512": "jleteC0seumLGTmTVwob97lcwPj/dfgzL/V3g/VVcMZgo2Ic7jzdy8AYpByPDh8e3uRq0SjCl6HOFCjhy5GzRQ==",
       "type": "package",
-      "path": "microsoft.build.framework/17.11.4",
+      "path": "microsoft.build.framework/17.12.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2188,16 +2168,16 @@
         "lib/net472/Microsoft.Build.Framework.dll",
         "lib/net472/Microsoft.Build.Framework.pdb",
         "lib/net472/Microsoft.Build.Framework.xml",
-        "lib/net8.0/Microsoft.Build.Framework.dll",
-        "lib/net8.0/Microsoft.Build.Framework.pdb",
-        "lib/net8.0/Microsoft.Build.Framework.xml",
-        "microsoft.build.framework.17.11.4.nupkg.sha512",
+        "lib/net9.0/Microsoft.Build.Framework.dll",
+        "lib/net9.0/Microsoft.Build.Framework.pdb",
+        "lib/net9.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.17.12.6.nupkg.sha512",
         "microsoft.build.framework.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.Framework.dll",
         "ref/net472/Microsoft.Build.Framework.xml",
-        "ref/net8.0/Microsoft.Build.Framework.dll",
-        "ref/net8.0/Microsoft.Build.Framework.xml",
+        "ref/net9.0/Microsoft.Build.Framework.dll",
+        "ref/net9.0/Microsoft.Build.Framework.xml",
         "ref/netstandard2.0/Microsoft.Build.Framework.dll",
         "ref/netstandard2.0/Microsoft.Build.Framework.xml"
       ]
@@ -2218,10 +2198,10 @@
         "microsoft.build.locator.nuspec"
       ]
     },
-    "Microsoft.Build.Tasks.Core/17.11.4": {
-      "sha512": "i3a0+1fuIxr3XgqpVBD2gnPRmZNOgYrPZs9sZViQH1HnjCrgxOpTZtdsXV+G7OyO4q05S5nfAQdSHUxNjnoE4A==",
+    "Microsoft.Build.Tasks.Core/17.12.6": {
+      "sha512": "ENxyDD/Bp3aa5V1Og6sCKBL26gEuDsP9MtUbnzNO3mhiLHmb/WiRcmtIAXamCefPsIdy+X7pzLHyJVE9vjvz8g==",
       "type": "package",
-      "path": "microsoft.build.tasks.core/17.11.4",
+      "path": "microsoft.build.tasks.core/17.12.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2230,24 +2210,24 @@
         "lib/net472/Microsoft.Build.Tasks.Core.dll",
         "lib/net472/Microsoft.Build.Tasks.Core.pdb",
         "lib/net472/Microsoft.Build.Tasks.Core.xml",
-        "lib/net8.0/Microsoft.Build.Tasks.Core.dll",
-        "lib/net8.0/Microsoft.Build.Tasks.Core.pdb",
-        "lib/net8.0/Microsoft.Build.Tasks.Core.xml",
-        "microsoft.build.tasks.core.17.11.4.nupkg.sha512",
+        "lib/net9.0/Microsoft.Build.Tasks.Core.dll",
+        "lib/net9.0/Microsoft.Build.Tasks.Core.pdb",
+        "lib/net9.0/Microsoft.Build.Tasks.Core.xml",
+        "microsoft.build.tasks.core.17.12.6.nupkg.sha512",
         "microsoft.build.tasks.core.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.Tasks.Core.dll",
         "ref/net472/Microsoft.Build.Tasks.Core.xml",
-        "ref/net8.0/Microsoft.Build.Tasks.Core.dll",
-        "ref/net8.0/Microsoft.Build.Tasks.Core.xml",
+        "ref/net9.0/Microsoft.Build.Tasks.Core.dll",
+        "ref/net9.0/Microsoft.Build.Tasks.Core.xml",
         "ref/netstandard2.0/Microsoft.Build.Tasks.Core.dll",
         "ref/netstandard2.0/Microsoft.Build.Tasks.Core.xml"
       ]
     },
-    "Microsoft.Build.Utilities.Core/17.11.4": {
-      "sha512": "b2CEJMgVuv5fkhaR6TXjgocIa6YQbseowRj15q3/IyH343EPr+CrxXAZs6Xp6uZDE8A3ynsLPlufFUMkjUl37A==",
+    "Microsoft.Build.Utilities.Core/17.12.6": {
+      "sha512": "pU3GnHcXp8VRMGKxdJCq+tixfhFn+QwEbpqmZmc/nqFHFyuhlGwjonWZMIWcwuCv/8EHgxoOttFvna1vrN+RrA==",
       "type": "package",
-      "path": "microsoft.build.utilities.core/17.11.4",
+      "path": "microsoft.build.utilities.core/17.12.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2256,16 +2236,16 @@
         "lib/net472/Microsoft.Build.Utilities.Core.dll",
         "lib/net472/Microsoft.Build.Utilities.Core.pdb",
         "lib/net472/Microsoft.Build.Utilities.Core.xml",
-        "lib/net8.0/Microsoft.Build.Utilities.Core.dll",
-        "lib/net8.0/Microsoft.Build.Utilities.Core.pdb",
-        "lib/net8.0/Microsoft.Build.Utilities.Core.xml",
-        "microsoft.build.utilities.core.17.11.4.nupkg.sha512",
+        "lib/net9.0/Microsoft.Build.Utilities.Core.dll",
+        "lib/net9.0/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net9.0/Microsoft.Build.Utilities.Core.xml",
+        "microsoft.build.utilities.core.17.12.6.nupkg.sha512",
         "microsoft.build.utilities.core.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.Utilities.Core.dll",
         "ref/net472/Microsoft.Build.Utilities.Core.xml",
-        "ref/net8.0/Microsoft.Build.Utilities.Core.dll",
-        "ref/net8.0/Microsoft.Build.Utilities.Core.xml",
+        "ref/net9.0/Microsoft.Build.Utilities.Core.dll",
+        "ref/net9.0/Microsoft.Build.Utilities.Core.xml",
         "ref/netstandard2.0/Microsoft.Build.Utilities.Core.dll",
         "ref/netstandard2.0/Microsoft.Build.Utilities.Core.xml"
       ]
@@ -2361,10 +2341,10 @@
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.NET.StringTools/17.11.4": {
-      "sha512": "mudqUHhNpeqIdJoUx2YDWZO/I9uEDYVowan89R6wsomfnUJQk6HteoQTlNjZDixhT2B4IXMkMtgZtoceIjLRmA==",
+    "Microsoft.NET.StringTools/17.12.6": {
+      "sha512": "w8Ehofqte5bJoR+Fa3f6JwkwFEkGtXxqvQHGOVOSHDzgNVySvL5FSNhavbQSZ864el9c3rjdLPLAtBW8dq6fmg==",
       "type": "package",
-      "path": "microsoft.net.stringtools/17.11.4",
+      "path": "microsoft.net.stringtools/17.12.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2373,19 +2353,19 @@
         "lib/net472/Microsoft.NET.StringTools.dll",
         "lib/net472/Microsoft.NET.StringTools.pdb",
         "lib/net472/Microsoft.NET.StringTools.xml",
-        "lib/net8.0/Microsoft.NET.StringTools.dll",
-        "lib/net8.0/Microsoft.NET.StringTools.pdb",
-        "lib/net8.0/Microsoft.NET.StringTools.xml",
+        "lib/net9.0/Microsoft.NET.StringTools.dll",
+        "lib/net9.0/Microsoft.NET.StringTools.pdb",
+        "lib/net9.0/Microsoft.NET.StringTools.xml",
         "lib/netstandard2.0/Microsoft.NET.StringTools.dll",
         "lib/netstandard2.0/Microsoft.NET.StringTools.pdb",
         "lib/netstandard2.0/Microsoft.NET.StringTools.xml",
-        "microsoft.net.stringtools.17.11.4.nupkg.sha512",
+        "microsoft.net.stringtools.17.12.6.nupkg.sha512",
         "microsoft.net.stringtools.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.NET.StringTools.dll",
         "ref/net472/Microsoft.NET.StringTools.xml",
-        "ref/net8.0/Microsoft.NET.StringTools.dll",
-        "ref/net8.0/Microsoft.NET.StringTools.xml",
+        "ref/net9.0/Microsoft.NET.StringTools.dll",
+        "ref/net9.0/Microsoft.NET.StringTools.xml",
         "ref/netstandard2.0/Microsoft.NET.StringTools.dll",
         "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
       ]
@@ -4118,34 +4098,6 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
-    "System.IO.Pipelines/9.0.0": {
-      "sha512": "eA3cinogwaNB4jdjQHOP3Z3EuyiDII7MT35jgtnsA4vkn0LUrrSHsU0nzHTzFzmaFYeKV7MYyMxOocFzsBHpTw==",
-      "type": "package",
-      "path": "system.io.pipelines/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.IO.Pipelines.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
-        "lib/net462/System.IO.Pipelines.dll",
-        "lib/net462/System.IO.Pipelines.xml",
-        "lib/net8.0/System.IO.Pipelines.dll",
-        "lib/net8.0/System.IO.Pipelines.xml",
-        "lib/net9.0/System.IO.Pipelines.dll",
-        "lib/net9.0/System.IO.Pipelines.xml",
-        "lib/netstandard2.0/System.IO.Pipelines.dll",
-        "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.9.0.0.nupkg.sha512",
-        "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.Linq/4.3.0": {
       "sha512": "5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "type": "package",
@@ -5515,42 +5467,37 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encodings.Web/9.0.0": {
-      "sha512": "e2hMgAErLbKyUUwt18qSBf9T5Y+SFAL3ZedM8fLupkVj8Rj2PZ9oxQ37XX2LF8fTO1wNIxvKpihD7Of7D/NxZw==",
+    "System.Text.Encodings.Web/6.0.0": {
+      "sha512": "Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
       "type": "package",
-      "path": "system.text.encodings.web/9.0.0",
+      "path": "system.text.encodings.web/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Text.Encodings.Web.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
-        "lib/net462/System.Text.Encodings.Web.dll",
-        "lib/net462/System.Text.Encodings.Web.xml",
-        "lib/net8.0/System.Text.Encodings.Web.dll",
-        "lib/net8.0/System.Text.Encodings.Web.xml",
-        "lib/net9.0/System.Text.Encodings.Web.dll",
-        "lib/net9.0/System.Text.Encodings.Web.xml",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Text.Encodings.Web.dll",
+        "lib/net461/System.Text.Encodings.Web.xml",
+        "lib/net6.0/System.Text.Encodings.Web.dll",
+        "lib/net6.0/System.Text.Encodings.Web.xml",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.dll",
+        "lib/netcoreapp3.1/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net9.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net9.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.9.0.0.nupkg.sha512",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.6.0.0.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/9.0.0": {
-      "sha512": "js7+qAu/9mQvnhA4EfGMZNEzXtJCDxgkgj8ohuxq/Qxv+R56G+ljefhiJHOxTNiw54q8vmABCWUwkMulNdlZ4A==",
+    "System.Text.Json/8.0.5": {
+      "sha512": "0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg==",
       "type": "package",
-      "path": "system.text.json/9.0.0",
+      "path": "system.text.json/8.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5602,18 +5549,20 @@
         "analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
         "buildTransitive/net461/System.Text.Json.targets",
         "buildTransitive/net462/System.Text.Json.targets",
-        "buildTransitive/net8.0/System.Text.Json.targets",
+        "buildTransitive/net6.0/System.Text.Json.targets",
         "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
         "buildTransitive/netstandard2.0/System.Text.Json.targets",
         "lib/net462/System.Text.Json.dll",
         "lib/net462/System.Text.Json.xml",
+        "lib/net6.0/System.Text.Json.dll",
+        "lib/net6.0/System.Text.Json.xml",
+        "lib/net7.0/System.Text.Json.dll",
+        "lib/net7.0/System.Text.Json.xml",
         "lib/net8.0/System.Text.Json.dll",
         "lib/net8.0/System.Text.Json.xml",
-        "lib/net9.0/System.Text.Json.dll",
-        "lib/net9.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.9.0.0.nupkg.sha512",
+        "system.text.json.8.0.5.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -5819,7 +5768,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "Nuke.Common >= 9.0.4"
     ]
   },
@@ -5845,15 +5794,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -5870,8 +5819,8 @@
       "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "dependencies": {
           "Nuke.Common": {
             "target": "Package",
