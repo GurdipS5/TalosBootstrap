@@ -9,7 +9,7 @@
         <param name="credentialsStorageType" value="credentialsJSON" />
         <param name="enabled" value="true" />
         <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
-        <param name="rootId" value="Kinderworx_TalosBootstrap_HttpsGithubComGurdipS5TalosBootstrapRefsHeadsMain" />
+        <param name="rootId" value="Kinderworx_TalosBootstrap_HttpsGithubComGurdipS5TalosBootstrapRefsHeadsMaster" />
         <param name="showChanges" value="false" />
       </parameters>
     </extension>

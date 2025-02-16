@@ -6,7 +6,7 @@
     <parameters />
     <build-runners />
     <vcs-settings>
-      <vcs-entry-ref root-id="Kinderworx_TalosBootstrap_HttpsGithubComGurdipS5TalosBootstrapRefsHeadsMain" />
+      <vcs-entry-ref root-id="Kinderworx_TalosBootstrap_HttpsGithubComGurdipS5TalosBootstrapRefsHeadsMaster" />
     </vcs-settings>
     <requirements />
     <build-triggers>
